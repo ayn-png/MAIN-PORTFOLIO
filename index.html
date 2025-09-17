@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== SEO META TAGS ===============-->
+    <title>Ayan Aalam - Personal Portfolio</title>
+    <meta name="description" content="A modern, animated, and responsive personal portfolio website for a passionate software developer.">
+    <meta name="keywords" content="portfolio, web developer, frontend, backend, full-stack, personal website, software engineer">
+    <meta name="author" content="Your Name">
+
+    <!--=============== OPEN GRAPH (OG) TAGS ===============-->
+    <meta property="og:title" content="Ayan Aalam - Personal Portfolio">
+    <meta property="og:description" content="Welcome to my personal portfolio. I am a passionate developer creating modern web applications.">
+    <meta property="og:image" content="assets/img/profile-pic.png"> <!-- Use an absolute URL when deployed -->
+    <meta property="og:url" content="https://yourwebsite.com"> <!-- Your deployed website URL -->
+    <meta property="og:type" content="website">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="icon" href="assets/img/favicon-32x32.png" type="image/x-icon">
+
+    <!--=============== FONT AWESOME ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Ayan Aalam- Portfolio</title>
+</head>
+<body>
+    <!--=============== PARTICLES BACKGROUND CONTAINER ===============-->
+    <div id="tsparticles"></div>
+
+    <!--=============== HEADER (Mobile) ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">Ayan Aalam</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active-link"><i class="fa-solid fa-house"></i></a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link"><i class="fa-solid fa-user"></i></a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link"><i class="fa-solid fa-file-code"></i></a></li>
+                    <li class="nav__item"><a href="#portfolio" class="nav__link"><i class="fa-solid fa-briefcase"></i></a></li>
+                    <li class="nav__item"><a href="#blog" class="nav__link"><i class="fa-solid fa-newspaper"></i></a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link"><i class="fa-solid fa-message"></i></a></li>
+                </ul>
+            </div>
+            
+            <!-- Theme change button -->
+            <i class="fa-solid fa-moon change-theme" id="theme-button"></i>
+        </nav>
+    </header>
+
+    <!--=============== SIDEBAR (Desktop) ===============-->
+    <div class="sidebar">
+        <nav class="side__nav">
+            <a href="#home" class="nav__logo-side">AN</a>
+            <div class="side__nav-menu">
+                <ul class="side__nav-list">
+                    <li><a href="#home" class="side__nav-link active-link" data-title="Home"><i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="#about" class="side__nav-link" data-title="About"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="#skills" class="side__nav-link" data-title="Skills"><i class="fa-solid fa-file-code"></i></a></li>
+                    <li><a href="#portfolio" class="side__nav-link" data-title="Portfolio"><i class="fa-solid fa-briefcase"></i></a></li>
+                    <li><a href="#blog" class="side__nav-link" data-title="Blog"><i class="fa-solid fa-newspaper"></i></a></li>
+                    <li><a href="#contact" class="side__nav-link" data-title="Contact"><i class="fa-solid fa-message"></i></a></li>
+                </ul>
+            </div>
+            <div class="theme-toggle-side">
+                <i class="fa-solid fa-moon change-theme-side" id="theme-button-side"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!--=============== MAIN CONTENT ===============-->
+    <main class="main">
+        <!--=============== HOME ===============-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <span class="home__greeting">Hello, I'm</span>
+                    <h1 class="home__name">Ayan Aalam</h1>
+                    <h3 class="home__education">I'm a <span class="typing"></span></h3>
+                    
+                    <div class="home__social">
+                        <a href="https://www.linkedin.com/in/ayan-aalam-518a1b2b5/" target="_blank" class="home__social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/ayn-png" target="_blank" class="home__social-link"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://x.com/ayan_ikk" target="_blank" class="home__social-link"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+
+                    <a href="#contact" class="button">Contact Me</a>
+                </div>
+
+                <div class="home__handle">
+                    <img src="assets/img/profile-pic.png" alt="Profile Picture" class="home__img">
+                </div>
+            </div>
+        </section>
+
+        <!--=============== ABOUT ===============-->
+        <section class="about section" id="about">
+            <h2 class="section__title">About Me</h2>
+            <div class="about__container container grid">
+                <div class="about__img-container">
+                    <img src="assets/img/profile-pic.png" alt="About Picture" class="about__img">
+                </div>
+                
+                <div class="about__data">
+                    <p class="about__description">
+                        Motivated Computer Science student with a strong curiosity for Artificial Intelligence, data-driven innovations, and problem-solving. Passionate about exploring new technologies and building impactful projects, while continuously learning and adapting to emerging trends in the tech industry
+                    </p>
+                    <a href="/assets/img/My resume.pdf" target="_blank" class="button">Download CV <i class="fa-solid fa-download"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== SKILLS ===============-->
+        <section class="skills section" id="skills">
+            <h2 class="section__title">Skills</h2>
+            <div class="skills__container container grid">
+                <div class="skills__content">
+                    <h3 class="skills__title">Frontend Developer</h3>
+                    <div class="skills__box">
+                        <div class="skills__group">
+                            <div class="skills__data"><i class="fa-solid fa-circle-check"></i><div><h3 class="skills__name">HTML</h3></div></div>
+                            <div class="skills__data"><i class="fa-solid fa-circle-check"></i><div><h3 class="skills__name">CSS</h3></div></div>
+                            <div class="skills__data"><i class="fa-solid fa-circle-check"></i><div><h3 class="skills__name">JavaScript</h3></div></div>
+                        </div>
+                        <div class="skills__group">
+                            <div class="skills__data"><i class="fa-solid fa-circle-check"></i><div><h3 class="skills__name">React</h3></div></div>
+                            <div class="skills__data"><i class="fa-solid fa-circle-check"></i><div><h3 class="skills__name">Bootstrap</h3></div></div>
+                            <div class="skills__data"><i class="fa-solid fa-circle-check"></i><div><h3 class="skills__name">Git</h3></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills__content">
+                    <h3 class="skills__title">Backend Developer</h3>
+                    <div class="skills__box">
+                        <div class="skills__group">
+                            <div class="skills__data"><i class="fa-solid fa-circle-check"></i><div><h3 class="skills__name">Java</h3></div></div>
+                            <div class="skills__data"><i class="fa-solid fa-circle-check"></i><div><h3 class="skills__name">Python</h3></div></div>
+                            <div class="skills__data"><i class="fa-solid fa-circle-check"></i><div><h3 class="skills__name">MongoDB</h3></div></div>
+                        </div>
+                        <div class="skills__group">
+                            <div class="skills__data"><i class="fa-solid fa-circle-check"></i><div><h3 class="skills__name">SQL</h3></div></div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== PORTFOLIO ===============-->
+        <section class="portfolio section" id="portfolio">
+            <h2 class="section__title">Portfolio</h2>
+            <div class="portfolio__container container grid">
+                <div class="portfolio__card">
+                    <img src="/assets/img/bg.gen.1.png" alt="Project 1" class="portfolio__img">
+                    <div class="portfolio__data">
+                        
+                        <h3 class="portfolio__title">Genrative AI Model</h3>
+                        <p class="portfolio__description">Built a conversational AI assistant using Hugging Face and other AI tools.</p>
+                        <a href="https://ayanchatbott.ccbp.tech/" target="_blank" class="button button-link">Demo <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="portfolio__card">
+                   <img src="/assets/img/pr3.png" alt="Project 3" class="portfolio__img">
+                    <div class="portfolio__data">
+                        <h3 class="portfolio__title">Recipe Finder App</h3>
+                        <p class="portfolio__description">The Recipe Finder App is a smart and user-friendly platform that helps users discover delicious recipes based on ingredients they already have at home or specific dishes they want to try.</p>
+                        <a href="https://recipe-finder-silk-phi.vercel.app/" class="button button-link">Demo <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio__card">
+                    <img src="/assets/img/pr2.png" alt="Project 2" class="portfolio__img">
+                    <div class="portfolio__data">
+                        <h3 class="portfolio__title">Free lancing Portfolio</h3>
+                        <p class="portfolio__description">A also made a freelancing portfolio using Talwind CSs, React , Js.</p>
+                        <a href="https://aynport.vercel.app/" class="button button-link">Demo <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!--=============== BLOG ===============-->
+        <section class="blog section" id="blog">
+            <h2 class="section__title">Certificates</h2>
+            <div class="blog__container container grid">
+                <div class="blog__card">
+                    <div class="blog__img-container">
+                        <img src="/assets/img/certificate1.jpg" alt="Blog 1" class="blog__img">
+                    </div>
+                    <div class="blog__data">
+                        <h3 class="blog__title">NPTEL Online Certification – Database Management System (DBMS)</h3>
+                        <p class="blog__description">Skills gained: SQL, relational databases, query optimization, and data modeling.</p>
+                        <a href="#" class="button button-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="blog__card">
+                    <div class="blog__img-container">
+                        <img src="/assets/img/sc1.png" alt="Blog 2" class="blog__img">
+                    </div>
+                    <div class="blog__data">
+                        <h3 class="blog__title">Salesforce Developer With Agentblazer Champion Program.</h3>
+                        <p class="blog__description">This was an 8-Week Virtual Internship Program that took place from May to July 2025. It was a collaborative effort between Salesforce Partner.</p>
+                        <a href="#" class="button button-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== CONTACT ===============-->
+        <section class="contact section" id="contact">
+            <h2 class="section__title">Contact Me</h2>
+            <div class="contact__container container grid">
+                <form action="" class="contact__form" id="contact-form">
+                    <div class="contact__group">
+                        <input type="text" name="user_name" placeholder="Enter your name" required class="contact__input">
+                        <input type="email" name="user_email" placeholder="Enter your email" required class="contact__input">
+                    </div>
+                    <textarea name="user_project" placeholder="Enter your message" required class="contact__input"></textarea>
+                    <p class="contact__message" id="contact-message"></p>
+                    <button type="submit" class="button contact__button">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer">
+        <div class="footer__container container">
+            <p class="footer__copy">&copy; Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    
+    <!--=============== TYPED JS ===============-->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!--=============== EMAIL JS ===============-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <!--=============== TSPARTICLES ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/basic@2.12.0/tsparticles.basic.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-engine@2.12.0/tsparticles.engine.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
