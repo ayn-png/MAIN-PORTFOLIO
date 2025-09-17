@@ -147,18 +147,26 @@ function initializeApp() {
     }
     
     /*----- 6. EMAILJS CONTACT FORM -----*/
-   (function() {
-    emailjs.init("Xin5jBxl201TZcsvf"); // Your Public Key
+ (function() {
+    // Your Public Key
+    emailjs.init("Xin5jBxl201TZcsvf"); 
 })();
 
 function initContactForm() {
     const contactForm = document.getElementById('contact-form');
     const contactMessage = document.getElementById('contact-message');
+    const timeField = document.getElementById('time-field'); // Get the hidden time field
 
     if (contactForm) {
         function sendEmail(e) {
             e.preventDefault();
 
+            // Set the current time in the hidden field before sending
+            if(timeField) {
+                timeField.value = new Date().toLocaleString();
+            }
+
+            // Your Service ID, Template ID, and the form
             emailjs.sendForm('service_fpwp18e', 'template_qm2g8bo', contactForm)
                 .then(() => {
                     contactMessage.textContent = '✅ Message sent successfully!';
@@ -174,6 +182,8 @@ function initContactForm() {
     }
 }
 
+// Make sure to call the function to attach the event listener
+initContactForm();
 
     /*----- 7. GEMINI AI GENERATOR -----*/
     function initAIGenerator() {
