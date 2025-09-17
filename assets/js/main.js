@@ -147,24 +147,33 @@ function initializeApp() {
     }
     
     /*----- 6. EMAILJS CONTACT FORM -----*/
-    function initContactForm() {
-        const contactForm = document.getElementById('contact-form');
-        if (contactForm) {
-            const contactMessage = document.getElementById('contact-message');
-            function sendEmail(e) {
-                e.preventDefault();
-                emailjs.sendForm('service_fpwp18e', 'template_qm2g8bo', '#contact-form', 'Xin5jBxl201TZcsvf')
-                    .then(() => {
-                        contactMessage.textContent = 'Message sent successfully! ✅';
-                        setTimeout(() => { contactMessage.textContent = ''; }, 5000);
-                        contactForm.reset();
-                    }, () => {
-                        contactMessage.textContent = 'Message not sent (service error) ❌';
-                    });
-            }
-            contactForm.addEventListener('submit', sendEmail);
+    (function() {
+    emailjs.init("Xin5jBxl201TZcsvf"); // Your Public Key
+})();
+
+function initContactForm() {
+    const contactForm = document.getElementById('contact-form');
+    const contactMessage = document.getElementById('contact-message');
+
+    if (contactForm) {
+        function sendEmail(e) {
+            e.preventDefault();
+
+            emailjs.sendForm('service_fpwp18e', 'template_qm2g8bo', contactForm, 'Xin5jBxl201TZcsvf')
+                .then(() => {
+                    contactMessage.textContent = 'Message sent successfully! ✅';
+                    setTimeout(() => { contactMessage.textContent = ''; }, 5000);
+                    contactForm.reset();
+                }, (error) => {
+                    contactMessage.textContent = 'Message not sent (service error) ❌';
+                    console.error("EmailJS Error:", error);
+                });
         }
+
+        contactForm.addEventListener('submit', sendEmail);
     }
+}
+
 
     /*----- 7. GEMINI AI GENERATOR -----*/
     function initAIGenerator() {
