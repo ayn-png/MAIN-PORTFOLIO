@@ -153,7 +153,7 @@ function initializeApp() {
             const contactMessage = document.getElementById('contact-message');
             function sendEmail(e) {
                 e.preventDefault();
-                emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', '#contact-form', 'YOUR_PUBLIC_KEY')
+                emailjs.sendForm('service_fpwp18e', 'template_qm2g8bo', '#contact-form', 'Xin5jBxl201TZcsvf')
                     .then(() => {
                         contactMessage.textContent = 'Message sent successfully! ✅';
                         setTimeout(() => { contactMessage.textContent = ''; }, 5000);
