@@ -147,7 +147,7 @@ function initializeApp() {
     }
     
     /*----- 6. EMAILJS CONTACT FORM -----*/
-    (function() {
+   (function() {
     emailjs.init("Xin5jBxl201TZcsvf"); // Your Public Key
 })();
 
@@ -159,13 +159,13 @@ function initContactForm() {
         function sendEmail(e) {
             e.preventDefault();
 
-            emailjs.sendForm('service_fpwp18e', 'template_qm2g8bo', contactForm, 'Xin5jBxl201TZcsvf')
+            emailjs.sendForm('service_fpwp18e', 'template_qm2g8bo', contactForm)
                 .then(() => {
-                    contactMessage.textContent = 'Message sent successfully! ✅';
+                    contactMessage.textContent = '✅ Message sent successfully!';
                     setTimeout(() => { contactMessage.textContent = ''; }, 5000);
                     contactForm.reset();
                 }, (error) => {
-                    contactMessage.textContent = 'Message not sent (service error) ❌';
+                    contactMessage.textContent = '❌ Message not sent (service error)';
                     console.error("EmailJS Error:", error);
                 });
         }
